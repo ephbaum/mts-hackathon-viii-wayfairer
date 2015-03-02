@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainView-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="MainView" id="vXZ-lx-hvc" customClass="AAPLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKM-50-wav"/>
+                        <viewControllerLayoutGuide type="bottom" id="BSO-b2-nar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JIg-XY-Nu0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radius" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-F8-Gai">
+                                <rect key="frame" x="6" y="7" width="62" height="62"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-V7-hCw">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="YZJ-XF-nQY"/>
+                                    <constraint firstAttribute="width" constant="75" id="tus-74-Z2p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first_floor_layout" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-8e-5tu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second_floor_layout" translatesAutoresizingMaskIntoConstraints="NO" id="A48-Ll-GOj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xw5-D8-JY0">
+                                <rect key="frame" x="16" y="532" width="288" height="29"/>
+                                <segments>
+                                    <segment title="First Floor"/>
+                                    <segment title="Second Floor"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XqK-iL-67W"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BSO-b2-nar" firstAttribute="top" secondItem="xw5-D8-JY0" secondAttribute="bottom" constant="8" symbolic="YES" id="0Kq-Rg-oGB"/>
+                            <constraint firstItem="xw5-D8-JY0" firstAttribute="centerX" secondItem="Gk1-8e-5tu" secondAttribute="centerX" id="2c0-qB-8K3"/>
+                            <constraint firstItem="5yS-V7-hCw" firstAttribute="leading" secondItem="Gk1-8e-5tu" secondAttribute="leading" id="9ZT-oe-bgo"/>
+                            <constraint firstItem="xw5-D8-JY0" firstAttribute="centerX" secondItem="A48-Ll-GOj" secondAttribute="centerX" id="Fjm-hO-tR5"/>
+                            <constraint firstItem="A48-Ll-GOj" firstAttribute="top" secondItem="Gk1-8e-5tu" secondAttribute="top" id="S8w-JW-Eax"/>
+                            <constraint firstItem="xw5-D8-JY0" firstAttribute="leading" secondItem="JIg-XY-Nu0" secondAttribute="leadingMargin" id="Sy9-4Z-VPt"/>
+                            <constraint firstAttribute="trailing" secondItem="Gk1-8e-5tu" secondAttribute="trailing" id="Vsq-QW-AQq"/>
+                            <constraint firstItem="A48-Ll-GOj" firstAttribute="bottom" secondItem="BSO-b2-nar" secondAttribute="top" id="fjs-ae-vQC"/>
+                            <constraint firstAttribute="bottom" secondItem="Gk1-8e-5tu" secondAttribute="bottom" id="hUg-xj-j3X"/>
+                            <constraint firstItem="A48-Ll-GOj" firstAttribute="leading" secondItem="Gk1-8e-5tu" secondAttribute="leading" id="jHo-TH-Ofg"/>
+                            <constraint firstItem="Gk1-8e-5tu" firstAttribute="top" secondItem="JIg-XY-Nu0" secondAttribute="top" id="jKG-tp-kaQ"/>
+                            <constraint firstItem="5yS-V7-hCw" firstAttribute="centerX" secondItem="avJ-F8-Gai" secondAttribute="centerX" id="kw9-1a-BZy"/>
+                            <constraint firstItem="5yS-V7-hCw" firstAttribute="top" secondItem="A48-Ll-GOj" secondAttribute="top" id="oma-QY-fEB"/>
+                            <constraint firstItem="Gk1-8e-5tu" firstAttribute="leading" secondItem="JIg-XY-Nu0" secondAttribute="leading" id="pWb-Vu-ztm"/>
+                            <constraint firstItem="avJ-F8-Gai" firstAttribute="top" secondItem="JIg-XY-Nu0" secondAttribute="topMargin" constant="7" id="q8O-hs-SCf"/>
+                        </constraints>
+                    </view>
+                    <keyCommands>
+                        <keyCommand actionName=""/>
+                    </keyCommands>
+                    <connections>
+                        <outlet property="first_floor_layout" destination="Gk1-8e-5tu" id="rPd-e9-5hH"/>
+                        <outlet property="pinView" destination="5yS-V7-hCw" id="RQB-Ze-6Dq"/>
+                        <outlet property="radiusView" destination="avJ-F8-Gai" id="FW6-82-6cM"/>
+                        <outlet property="second_floor_layout" destination="A48-Ll-GOj" id="Mkg-jB-I3E"/>
+                        <outlet property="segmentedControl" destination="xw5-D8-JY0" id="GhV-Qr-byl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="691"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first_floor_layout" width="1170" height="1142"/>
+        <image name="pin" width="150" height="150"/>
+        <image name="radius" width="62" height="62"/>
+        <image name="second_floor_layout" width="1170" height="1142"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
